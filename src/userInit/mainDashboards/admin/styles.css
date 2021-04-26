@@ -1,0 +1,71 @@
+/*------ TableView Style ------*/
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color:  #d9d9d9;
+    -fx-stroke: transparent;
+    -fx-size:30;
+    -fx-alignment: CENTER ;
+    -fx-text-alignment: center;
+
+}
+.table-row-cell:filled:hover {
+
+    -fx-size:30;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+
+
+}
+.table-view:row-selection {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-fixed-cell-size: 30;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+
+}
+
+.table-view .table-column{
+    -fx-text-alignment: center;
+    -fx-alignment: CENTER
+
+}
+
+
+/*------ CheckBox Style ------*/
+
+.choice-box{
+    -fx-background-color: linear-gradient(#a3b0dc, #4059a9);
+    -fx-mark-color: #4059a9;
+
+}
+
+.choice-box .label{
+    -fx-text-fill: #ffffff;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: #4059a9;
+}
+
+.choice-box .menu-item > .label {
+    -fx-text-fill: #ffffff;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: #2a3a6f;
+}
+
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: #ffffff;
+}
+
+
+/*------ TimePicker & DatePicker ------*/
+
+.jfx-text-field, .jfx-password-field, .jfx-text-area, .jfx-combobox {
+    -fx-text-fill:#ffffff;
+    -fx-prompt-text-fill: #ffffff;
+}

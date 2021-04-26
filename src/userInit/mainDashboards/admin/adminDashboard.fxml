@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #333333;" styleClass="basic-anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInit.mainDashboards.admin.AdminDashboardController">
+   <children>
+      <HBox fx:id="topPane" alignment="TOP_RIGHT" layoutX="1.0" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="35.0" prefWidth="1300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="985.0" text="Cinema Booking System" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="adminID" alignment="BASELINE_LEFT" disable="true" prefHeight="35.0" prefWidth="247.0" text="admin" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../../images/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#minimize">
+               <image>
+                  <Image url="@../../../images/minimize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#maximize">
+               <image>
+                  <Image url="@../../../images/maximize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#exit">
+               <image>
+                  <Image url="@../../../images/close.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="-1.0" layoutY="32.0" prefHeight="665.0" prefWidth="198.0" style="-fx-background-color: #1a1a1a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="35.0">
+         <effect>
+            <DropShadow height="0.0" radius="4.75" />
+         </effect>
+         <children>
+            <AnchorPane layoutX="-1.0" prefHeight="665.0" prefWidth="55.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow height="0.0" radius="4.75" />
+               </effect>
+            </AnchorPane>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="0.0" layoutY="130.0" onAction="#goToHome" prefHeight="52.0" prefWidth="198.0" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="146.0">
+               <image>
+                  <Image url="@../../../images/home.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="0.0" layoutY="181.0" onAction="#goToMovies" prefHeight="52.0" prefWidth="198.0" text="Movies" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="197.0">
+               <image>
+                  <Image url="@../../../images/movie.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="0.0" layoutY="233.0" onAction="#goToCinemas" prefHeight="52.0" prefWidth="198.0" text="Cinemas" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="249.0">
+               <image>
+                  <Image url="@../../../images/cinema.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="0.0" layoutY="285.0" onAction="#goToShows" prefHeight="52.0" prefWidth="198.0" text="Shows" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="301.0">
+               <image>
+                  <Image url="@../../../images/shows.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="0.0" layoutY="337.0" onAction="#goToProfile" prefHeight="52.0" prefWidth="198.0" text="Profile" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="353.0">
+               <image>
+                  <Image url="@../../../images/profile.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BASELINE_CENTER" graphicTextGap="0.0" layoutY="576.0" onAction="#Logout" prefHeight="52.0" prefWidth="198.0" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="592.0">
+               <image>
+                  <Image url="@../../../images/shutdown.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="currPanel" layoutX="198.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1102.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0" />
+   </children>
+</AnchorPane>

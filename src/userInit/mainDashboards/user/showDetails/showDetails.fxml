@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="717.0" style="-fx-background-color: #333333; -fx-border-color: #8c8c8c;" styleClass="basic-anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInit.mainDashboards.user.showDetails.showDetailsController">
+   <children>
+      <HBox fx:id="topPane" alignment="TOP_RIGHT" layoutX="1.0" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="35.0" prefWidth="717.0">
+         <children>
+            <Label alignment="BASELINE_LEFT" prefHeight="35.0" prefWidth="333.0" text="Cinema Booking System" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#minimize">
+               <image>
+                  <Image url="@../../../../images/minimize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#maximize">
+               <image>
+                  <Image url="@../../../../images/maximize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#exit">
+               <image>
+                  <Image url="@../../../../images/close.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label layoutX="291.0" layoutY="43.0" text="Show details" textAlignment="JUSTIFY" textFill="#fcfcfc">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <Line endX="15.0" endY="336.0" fill="WHITE" layoutX="324.0" layoutY="159.0" opacity="0.5" startX="15.0" startY="-77.0" stroke="WHITE" strokeWidth="0.1" />
+      <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="96.0" prefHeight="27.0" prefWidth="79.0" text="Cinema name:" textFill="#979797" />
+      <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="123.0" prefHeight="27.0" prefWidth="79.0" text="Address:" textFill="#979797" />
+      <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="150.0" prefHeight="27.0" prefWidth="79.0" text="Screen:" textFill="#979797" />
+      <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="202.0" prefHeight="27.0" prefWidth="79.0" text="Ticekt prices:" textFill="#979797" />
+      <JFXTextArea fx:id="adult" editable="false" focusTraversable="false" labelFloat="true" layoutX="52.0" layoutY="259.0" prefHeight="38.0" prefWidth="60.0" promptText="Adult" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextArea fx:id="child" editable="false" focusTraversable="false" labelFloat="true" layoutX="120.0" layoutY="258.0" prefHeight="39.0" prefWidth="60.0" promptText="Child" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextArea fx:id="student" editable="false" focusTraversable="false" labelFloat="true" layoutX="188.0" layoutY="258.0" prefHeight="39.0" prefWidth="60.0" promptText="Student" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextArea fx:id="family" editable="false" focusTraversable="false" labelFloat="true" layoutX="255.0" layoutY="258.0" prefHeight="39.0" prefWidth="60.0" promptText="Family" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <ImageView fx:id="poster" fitHeight="242.0" fitWidth="165.0" layoutX="541.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/default-movie.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="movieName" alignment="CENTER" layoutX="355.0" layoutY="79.0" prefHeight="35.0" prefWidth="347.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="director" editable="false" focusTraversable="false" labelFloat="true" layoutX="352.0" layoutY="144.0" prefHeight="39.0" prefWidth="176.0" promptText="Director" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextArea fx:id="cast" editable="false" focusTraversable="false" labelFloat="true" layoutX="352.0" layoutY="219.0" prefHeight="66.0" prefWidth="176.0" promptText="Cast" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextArea fx:id="details" editable="false" focusTraversable="false" labelFloat="true" layoutX="355.0" layoutY="408.0" prefHeight="66.0" prefWidth="347.0" promptText="Details" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextArea fx:id="rating" editable="false" focusTraversable="false" labelFloat="true" layoutX="352.0" layoutY="332.0" prefHeight="39.0" prefWidth="176.0" promptText="Rating" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <Button layoutX="41.0" layoutY="452.0" mnemonicParsing="false" onAction="#goBack" prefHeight="31.0" prefWidth="100.0" style="-fx-background-radius: 20; -fx-text-fill: #ffffff; -fx-background-color: #ffcc00;" text="Back">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="22.0">
+               <image>
+                  <Image url="@../../../../images/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="cinemaName" layoutX="112.0" layoutY="96.0" prefHeight="27.0" prefWidth="215.0" text="-" textFill="WHITE" />
+      <Label fx:id="address" layoutX="111.0" layoutY="123.0" prefHeight="27.0" prefWidth="215.0" text="-" textFill="WHITE" />
+      <Label fx:id="screen" layoutX="111.0" layoutY="150.0" prefHeight="27.0" prefWidth="215.0" text="-" textFill="WHITE" />
+   </children>
+   <effect>
+      <DropShadow color="#727272" />
+   </effect>
+   <opaqueInsets>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </opaqueInsets>
+</AnchorPane>

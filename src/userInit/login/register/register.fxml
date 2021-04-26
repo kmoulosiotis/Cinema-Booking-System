@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="381.0" style="-fx-background-color: #333333;" styleClass="basic-anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInit.login.register.RegisterController">
+   <children>
+      <HBox fx:id="topPane" alignment="TOP_RIGHT" layoutX="1.0" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="35.0" prefWidth="381.0">
+         <children>
+            <Label alignment="BASELINE_LEFT" prefHeight="35.0" prefWidth="298.0" text="Cinema Booking System" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#minimize">
+               <image>
+                  <Image url="@../../../images/minimize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#maximize">
+               <image>
+                  <Image url="@../../../images/maximize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#exit">
+               <image>
+                  <Image url="@../../../images/close.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="username" labelFloat="true" layoutX="112.0" layoutY="68.0" prefHeight="25.0" prefWidth="158.0" promptText="Username" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="84.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/user.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="fullName" labelFloat="true" layoutX="112.0" layoutY="138.0" prefHeight="25.0" prefWidth="158.0" promptText="Full name" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="84.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/identification.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="email" labelFloat="true" layoutX="112.0" layoutY="208.0" prefHeight="25.0" prefWidth="158.0" promptText="Email" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="84.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/email.png" />
+         </image>
+      </ImageView>
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="112.0" layoutY="278.0" prefHeight="25.0" prefWidth="158.0" promptText="Password" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="84.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/password.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="signUp" buttonType="RAISED" layoutX="113.0" layoutY="399.0" onAction="#RegisterUser" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #4059a9;" styleClass="JFXbutton" text="SIGN UP" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets top="2.0" />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="109.0" layoutY="439.0" prefHeight="17.0" prefWidth="120.0" text="Already have account?" textFill="WHITE" />
+      <Label layoutX="233.0" layoutY="439.0" onMouseClicked="#LoginUserPanel" prefHeight="17.0" prefWidth="39.0" text="Login" textFill="#4059a9" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+   </children>
+</AnchorPane>

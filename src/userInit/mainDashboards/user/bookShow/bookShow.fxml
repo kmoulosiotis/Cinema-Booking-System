@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="605.0" style="-fx-background-color: #333333; -fx-border-color: #8c8c8c;" styleClass="basic-anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInit.mainDashboards.user.bookShow.BookShowController">
+   <children>
+      <HBox fx:id="topPane" alignment="TOP_RIGHT" layoutX="1.0" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="35.0" prefWidth="605.0">
+         <children>
+            <Label alignment="BASELINE_LEFT" prefHeight="35.0" prefWidth="333.0" text="Cinema Booking System" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#minimize">
+               <image>
+                  <Image url="@../../../../images/minimize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#maximize">
+               <image>
+                  <Image url="@../../../../images/maximize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#exit">
+               <image>
+                  <Image url="@../../../../images/close.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </HBox>
+      <Pane layoutX="36.0" layoutY="53.0" prefHeight="81.0" prefWidth="227.0" style="-fx-background-color: #404040; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#6f6f6f" height="20.0" offsetX="2.0" offsetY="2.0" radius="9.5" width="20.0" />
+         </effect>
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="53.0" text="Movie" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="movieName" layoutX="6.0" layoutY="33.0" prefHeight="43.0" prefWidth="219.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="36.0" layoutY="148.0" prefHeight="81.0" prefWidth="227.0" style="-fx-background-color: #404040; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#6f6f6f" height="20.0" offsetX="2.0" offsetY="2.0" radius="9.5" width="20.0" />
+         </effect>
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="53.0" text="Cinema" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="cinemaName" layoutX="10.0" layoutY="35.0" prefHeight="43.0" prefWidth="213.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="276.0" layoutY="53.0" prefHeight="81.0" prefWidth="95.0" style="-fx-background-color: #404040; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#6f6f6f" height="20.0" offsetX="2.0" offsetY="2.0" radius="9.5" width="20.0" />
+         </effect>
+         <children>
+            <Label layoutX="18.0" layoutY="14.0" prefHeight="21.0" prefWidth="53.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" alignment="CENTER" layoutX="3.0" layoutY="35.0" prefHeight="43.0" prefWidth="87.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="281.0" layoutY="148.0" prefHeight="81.0" prefWidth="95.0" style="-fx-background-color: #404040; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#6f6f6f" height="20.0" offsetX="2.0" offsetY="2.0" radius="9.5" width="20.0" />
+         </effect>
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="53.0" text="Screen" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="screen" alignment="CENTER" layoutX="4.0" layoutY="35.0" prefHeight="43.0" prefWidth="87.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="36.0" layoutY="241.0" prefHeight="169.0" prefWidth="172.0" style="-fx-background-color: #404040; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#6f6f6f" height="20.0" offsetX="2.0" offsetY="2.0" radius="9.5" width="20.0" />
+         </effect>
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="105.0" text="Tickets costs" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="40.0" prefHeight="21.0" prefWidth="53.0" text="Adult:" textFill="#979797">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="70.0" prefHeight="21.0" prefWidth="53.0" text="Child:" textFill="#979797">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="100.0" prefHeight="21.0" prefWidth="65.0" text="Student:" textFill="#979797">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="130.0" prefHeight="21.0" prefWidth="65.0" text="Family:" textFill="#979797">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="adultCost" layoutX="67.0" layoutY="40.0" prefHeight="21.0" prefWidth="74.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="childCost" layoutX="67.0" layoutY="70.0" prefHeight="21.0" prefWidth="74.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="studentCost" layoutX="82.0" layoutY="100.0" prefHeight="21.0" prefWidth="74.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="familyCost" layoutX="74.0" layoutY="130.0" prefHeight="21.0" prefWidth="74.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="383.0" layoutY="53.0" prefHeight="81.0" prefWidth="95.0" style="-fx-background-color: #404040; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#6f6f6f" height="20.0" offsetX="2.0" offsetY="2.0" radius="9.5" width="20.0" />
+         </effect>
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="53.0" text="Time" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="time" alignment="CENTER" layoutX="4.0" layoutY="35.0" prefHeight="43.0" prefWidth="87.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="390.0" layoutY="148.0" prefHeight="81.0" prefWidth="95.0" style="-fx-background-color: #404040; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#6f6f6f" height="20.0" offsetX="2.0" offsetY="2.0" radius="9.5" width="20.0" />
+         </effect>
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="53.0" text="Seats" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="seats" alignment="CENTER" layoutX="4.0" layoutY="35.0" prefHeight="43.0" prefWidth="87.0" text="-" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <JFXRadioButton fx:id="adult" layoutX="256.0" layoutY="281.0" text="Adult" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <toggleGroup>
+            <ToggleGroup fx:id="category" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="child" layoutX="256.0" layoutY="313.0" text="Child" textFill="WHITE" toggleGroup="$category">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="student" layoutX="256.0" layoutY="345.0" text="Student" textFill="WHITE" toggleGroup="$category">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="family" layoutX="257.0" layoutY="379.0" text="Family" textFill="WHITE" toggleGroup="$category">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <Label layoutX="250.0" layoutY="252.0" prefHeight="21.0" prefWidth="105.0" text="Select category" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="440.0" layoutY="484.0" />
+      <JFXTextField fx:id="tickets" labelFloat="true" layoutX="411.0" layoutY="311.0" promptText="Number of tickets" style="-fx-text-fill: #fff;" />
+      <Button layoutX="408.0" layoutY="395.0" mnemonicParsing="false" onAction="#purchase" prefHeight="31.0" prefWidth="142.0" style="-fx-background-radius: 20; -fx-text-fill: #ffffff; -fx-background-color: #4059a9;" text="Purchase">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="22.0">
+               <image>
+                  <Image url="@../../../../images/cart.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <effect>
+      <DropShadow color="#727272" />
+   </effect>
+   <opaqueInsets>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </opaqueInsets>
+</AnchorPane>

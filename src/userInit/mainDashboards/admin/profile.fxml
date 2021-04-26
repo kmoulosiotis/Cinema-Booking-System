@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1102.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInit.mainDashboards.admin.ProfileController">
+   <children>
+      <Label layoutX="50.0" layoutY="38.0" prefHeight="37.0" prefWidth="184.0" text="Profile" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Line endX="977.0" fill="WHITE" layoutX="115.0" layoutY="85.0" startX="-100.0" stroke="WHITE" />
+      <Label layoutX="113.0" layoutY="139.0" prefHeight="27.0" prefWidth="65.0" text="Username:" textFill="#aeaeae">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="username" layoutX="187.0" layoutY="139.0" prefHeight="27.0" prefWidth="65.0" text="-" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="oldPassword" labelFloat="true" layoutX="113.0" layoutY="206.0" prefHeight="25.0" prefWidth="158.0" promptText="Old password" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="newPassword" labelFloat="true" layoutX="113.0" layoutY="281.0" prefHeight="25.0" prefWidth="158.0" promptText="New password" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton buttonType="RAISED" layoutX="113.0" layoutY="423.0" onAction="#save" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #4059a9;" styleClass="JFXbutton" text="Save changes" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets top="2.0" />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

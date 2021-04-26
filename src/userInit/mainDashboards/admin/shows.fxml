@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1102.0" style="-fx-background-color: #333333;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInit.mainDashboards.admin.ShowsController">
+   <children>
+      <TableView fx:id="showsTable" layoutX="17.0" layoutY="131.0" prefHeight="458.0" prefWidth="1062.0" stylesheets="@styles.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="131.0">
+         <columns>
+            <TableColumn fx:id="colSID" prefWidth="56.0" resizable="false" text="Show ID" />
+            <TableColumn fx:id="colCID" prefWidth="67.0" resizable="false" text="Cinema ID" />
+            <TableColumn fx:id="colMID" prefWidth="63.0" text="Movie ID" />
+            <TableColumn fx:id="colMovieName" prefWidth="252.0" text="Movie name" />
+            <TableColumn fx:id="colCinemaName" prefWidth="158.0" text="Cinema name" />
+            <TableColumn fx:id="colScreen" prefWidth="75.0" text="Screen" />
+            <TableColumn fx:id="colDate" prefWidth="182.0" text="Date" />
+            <TableColumn fx:id="colTime" minWidth="0.0" prefWidth="114.0" text="Time" />
+            <TableColumn fx:id="colSeats" prefWidth="92.0" text="Available seats" />
+         </columns>
+      </TableView>
+      <Button layoutX="633.0" layoutY="612.0" mnemonicParsing="false" onAction="#addShow" prefHeight="31.0" prefWidth="142.0" style="-fx-background-radius: 20; -fx-text-fill: #ffffff; -fx-background-color: #00cc00;" text="Add Show">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="22.0">
+               <image>
+                  <Image url="@../../../images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="923.0" layoutY="612.0" mnemonicParsing="false" onAction="#RemoveShow" prefHeight="31.0" prefWidth="159.0" style="-fx-background-radius: 20; -fx-text-fill: #ffffff; -fx-background-color: #e60000;" text="Remove Show">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="22.0">
+               <image>
+                  <Image url="@../../../images/remove.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="790.0" layoutY="612.0" mnemonicParsing="false" onAction="#refresh" prefHeight="31.0" prefWidth="124.0" style="-fx-background-radius: 20; -fx-text-fill: #ffffff; -fx-background-color: #ff751a;" text="Refresh">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="22.0">
+               <image>
+                  <Image url="@../../../images/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="37.0" layoutY="31.0" prefHeight="42.0" prefWidth="152.0" text="Shows" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

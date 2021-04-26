@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="625.0" style="-fx-background-color: #333333; -fx-border-color: #8c8c8c;" styleClass="basic-anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInit.mainDashboards.admin.addMovie.AddMovieController">
+   <children>
+      <HBox fx:id="topPane" alignment="TOP_RIGHT" layoutX="1.0" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="35.0" prefWidth="625.0">
+         <children>
+            <Label alignment="BASELINE_LEFT" prefHeight="35.0" prefWidth="359.0" text="Cinema Booking System" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#minimize">
+               <image>
+                  <Image url="@../../../../images/minimize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="15.0" onMouseClicked="#maximize">
+               <image>
+                  <Image url="@../../../../images/maximize.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#exit">
+               <image>
+                  <Image url="@../../../../images/close.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="movieName" labelFloat="true" layoutX="59.0" layoutY="84.0" prefHeight="25.0" prefWidth="158.0" promptText="Movie name" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="director" labelFloat="true" layoutX="59.0" layoutY="150.0" prefHeight="25.0" prefWidth="158.0" promptText="Director" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="cast" labelFloat="true" layoutX="59.0" layoutY="215.0" prefHeight="25.0" prefWidth="158.0" promptText="Cast" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="rating" labelFloat="true" layoutX="59.0" layoutY="431.0" prefHeight="25.0" prefWidth="158.0" promptText="Rating" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="details" labelFloat="true" layoutX="59.0" layoutY="281.0" prefHeight="113.0" prefWidth="158.0" promptText="Details" style="-fx-text-fill: #fff;" unFocusColor="WHITE" />
+      <ImageView fx:id="poster" fitHeight="293.0" fitWidth="225.0" layoutX="353.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/default-movie.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="353.0" layoutY="385.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="35.0" prefWidth="195.0" style="-fx-background-color: #4059a9;" text="Upload image" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0">
+               <image>
+                  <Image url="@../../../../images/movie.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="424.0" layoutY="460.0" mnemonicParsing="false" onAction="#addMovie" prefHeight="31.0" prefWidth="124.0" style="-fx-background-radius: 20; -fx-text-fill: #ffffff; -fx-background-color: #00cc00;" text="Add Movie">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="22.0">
+               <image>
+                  <Image url="@../../../../images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <effect>
+      <DropShadow color="#727272" />
+   </effect>
+   <opaqueInsets>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </opaqueInsets>
+</AnchorPane>
